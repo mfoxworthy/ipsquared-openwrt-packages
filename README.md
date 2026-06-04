@@ -1,6 +1,6 @@
-# netify-openwrt-packages
+# ipsquared-openwrt-packages
 
-OpenWrt package feed for [Netify](https://www.netify.ai/) per-application traffic statistics.
+OpenWrt package feed for per-application traffic statistics, built on the [Netify Agent](https://www.netify.ai/).
 
 ## Packages
 
@@ -20,14 +20,14 @@ OpenWrt package feed for [Netify](https://www.netify.ai/) per-application traffi
 Add the feed to your buildroot's `feeds.conf` (or `feeds.conf.default`):
 
 ```
-src-git netify https://github.com/mfoxworthy/netify-openwrt-packages.git
+src-git ipsquared https://github.com/mfoxworthy/ipsquared-openwrt-packages.git
 ```
 
 Then update and install:
 
 ```bash
-./scripts/feeds update netify
-./scripts/feeds install -a -p netify
+./scripts/feeds update ipsquared
+./scripts/feeds install -a -p ipsquared
 ```
 
 Enable in `make menuconfig` under:
