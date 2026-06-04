@@ -4,8 +4,9 @@ PKG_NAME:=netify-plugin-stats
 PKG_VERSION:=0.1.0
 PKG_RELEASE:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://github.com/mfoxworthy/netify-plugin-stats/archive/refs/tags/v$(PKG_VERSION)
+PKG_SOURCE:=v$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://github.com/mfoxworthy/netify-plugin-stats/archive/refs/tags
+PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_HASH:=fa6b02cb98d210559d72dcbdf2682225376b4af14659785157a58d82e13e904d
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
@@ -29,6 +30,10 @@ define Package/netify-plugin-stats/description
   Netify Agent processor plugin that accumulates per-application and
   per-category traffic statistics into a ring-buffer store and exposes
   them via an rpcd/ubus interface for the LuCI statistics UI.
+endef
+
+define Package/netify-plugin-stats/conffiles
+/etc/config/netify-stats
 endef
 
 define Build/Prepare
