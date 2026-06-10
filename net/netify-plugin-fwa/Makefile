@@ -23,7 +23,7 @@ define Package/netify-plugin-fwa
   SECTION:=net
   CATEGORY:=Network
   TITLE:=Netify firewall agent plugin (nftables sets)
-  DEPENDS:=+netifyd +libnftables +libuci +libstdcpp
+  DEPENDS:=+netifyd +nftables-json +libuci +libstdcpp
 endef
 
 define Package/netify-plugin-fwa/description
