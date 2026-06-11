@@ -1,0 +1,10 @@
+{
+	"luci-app-sd-wrt": {
+		"description": "View SD-WRT WAN path intelligence status",
+		"read": {
+			"ubus": {
+				"luci.sd-wrt": [ "status" ]
+			}
+		}
+	}
+}
