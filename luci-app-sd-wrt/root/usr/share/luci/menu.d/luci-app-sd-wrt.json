@@ -1,0 +1,13 @@
+{
+	"admin/statistics": {
+		"title": "Statistics",
+		"order": 80,
+		"action": { "type": "firstchild" }
+	},
+	"admin/statistics/sd_wrt": {
+		"title": "SD-WRT",
+		"order": 88,
+		"action": { "type": "view", "path": "sd-wrt/main" },
+		"depends": { "acl": [ "luci-app-sd-wrt" ] }
+	}
+}
