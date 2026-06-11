@@ -36,17 +36,17 @@ endef
 
 define Package/sd-wrt/install
 	$(INSTALL_DIR) $(1)/etc/config
-	$(INSTALL_CONF) $(CURDIR)/files/etc/config/sd-wrt $(1)/etc/config/
+	$(INSTALL_CONF) $(PKG_BUILD_DIR)/files/etc/config/sd-wrt $(1)/etc/config/
 	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) $(CURDIR)/files/etc/init.d/sd-wrt-probe  $(1)/etc/init.d/
-	$(INSTALL_BIN) $(CURDIR)/files/etc/init.d/sd-wrt-policy $(1)/etc/init.d/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/etc/init.d/sd-wrt-probe  $(1)/etc/init.d/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/etc/init.d/sd-wrt-policy $(1)/etc/init.d/
 	$(INSTALL_DIR) $(1)/etc/hotplug.d/iface
-	$(INSTALL_BIN) $(CURDIR)/files/etc/hotplug.d/iface/25-sd-wrt $(1)/etc/hotplug.d/iface/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/etc/hotplug.d/iface/25-sd-wrt $(1)/etc/hotplug.d/iface/
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(CURDIR)/files/usr/bin/sd-wrt-probe  $(1)/usr/bin/
-	$(INSTALL_BIN) $(CURDIR)/files/usr/bin/sd-wrt-policy $(1)/usr/bin/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/usr/bin/sd-wrt-probe  $(1)/usr/bin/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/usr/bin/sd-wrt-policy $(1)/usr/bin/
 	$(INSTALL_DIR) $(1)/usr/libexec/rpcd
-	$(INSTALL_BIN) $(CURDIR)/files/usr/libexec/rpcd/luci.sd-wrt $(1)/usr/libexec/rpcd/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/usr/libexec/rpcd/luci.sd-wrt $(1)/usr/libexec/rpcd/
 endef
 
 $(eval $(call BuildPackage,sd-wrt))
