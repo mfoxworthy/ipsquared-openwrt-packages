@@ -1,13 +1,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=netify-plugin-stats
-PKG_VERSION:=0.1.6
+PKG_VERSION:=0.1.7
 PKG_RELEASE:=1
 
 PKG_SOURCE:=v$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/mfoxworthy/netify-plugin-stats/archive/refs/tags
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_HASH:=24cb3822cdde98cd0f788ad7ab04080f9ba61a3a2873bcbcc94729e8ed3c0c92
+PKG_HASH:=37b1d8bae9e72a635bcfade80defbe49a70844f13c2ed48256fe3d97411ee242
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_FIXUP:=autoreconf
