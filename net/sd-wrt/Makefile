@@ -1,13 +1,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=sd-wrt
-PKG_VERSION:=0.1.4
+PKG_VERSION:=0.1.5
 PKG_RELEASE:=1
 
 PKG_SOURCE:=v$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/mfoxworthy/sd-wrt/archive/refs/tags
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_HASH:=7722414f0ab68ef70efb864c1a8cf22e9580d7e4a73a89e48ba9ceaaf3ede590
+PKG_HASH:=ae5239b775c1bc99abc775cbe49f1e83559c65fcc6226b21d176aab02c3303bf
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
