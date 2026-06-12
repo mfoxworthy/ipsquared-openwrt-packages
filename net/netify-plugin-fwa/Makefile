@@ -1,13 +1,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=netify-plugin-fwa
-PKG_VERSION:=0.1.5
+PKG_VERSION:=0.1.6
 PKG_RELEASE:=1
 
 PKG_SOURCE:=v$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/mfoxworthy/netify-plugin-fwa/archive/refs/tags
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_HASH:=dc1026f2a631b88967d6b7e21f3c22f0c286803cfc4fa953f9a12e020bc64566
+PKG_HASH:=417f6590f24841e12df5565bc8118d4e608cb93a13d5838e9ee8b71775101d6b
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_FIXUP:=autoreconf
@@ -48,6 +48,10 @@ define Package/netify-plugin-fwa/install
 
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_CONF) $(CURDIR)/files/etc/config/netify-fwa $(1)/etc/config/
+
+	$(INSTALL_DIR) $(1)/etc/netify.d
+	$(INSTALL_DATA) $(CURDIR)/files/etc/netify.d/netify-fwa-app-proto.json $(1)/etc/netify.d/
+	$(INSTALL_DATA) $(CURDIR)/files/etc/netify.d/netify-fwa-cat-index.json $(1)/etc/netify.d/
 endef
 
 $(eval $(call BuildPackage,netify-plugin-fwa))
