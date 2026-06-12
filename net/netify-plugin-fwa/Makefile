@@ -1,13 +1,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=netify-plugin-fwa
-PKG_VERSION:=0.1.3
+PKG_VERSION:=0.1.4
 PKG_RELEASE:=1
 
 PKG_SOURCE:=v$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/mfoxworthy/netify-plugin-fwa/archive/refs/tags
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_HASH:=0309101d56f1a6a279f52f6c74f94ebfbb511d8291312bfcb2b5fa6631eb25f3
+PKG_HASH:=620feb81b8c03bbc466d86fa33112febfba590bb2ec87c2eb128510b8b79853d
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_FIXUP:=autoreconf
